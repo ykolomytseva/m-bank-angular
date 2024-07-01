@@ -1,0 +1,118 @@
+<!-- Navbar -->
+<div
+    class="navbar-area absolute left-0 right-0 top-0 h-auto z-[3] py-[28px]"
+    [ngClass]="{
+        'white-navbar': router.url === '/' || router.url === '/index-2',
+        'half-white-navbar': router.url === '/index-2',
+        sticky: isSticky
+    }"
+>
+    <div
+        class="px-10 sm:px-12 md:px-20 lg:px-24 xl:px-28 2xl:px-32 container mx-auto"
+    >
+        <nav class="navbar flex flex-wrap" [class.active]="classApplied">
+            <!-- Logo -->
+            <a
+                routerLink="/"
+                class="self-center"
+                [ngClass]="{ hidden: router.url === '/' }"
+            >
+                <img [src]="logoUrl" alt="logo" style="max-width: 80px" />
+            </a>
+            <a
+                routerLink="/"
+                class="self-center hidden"
+                [ngClass]="{ 'inline-block': router.url === '/' }"
+                style="max-width: 100px"
+            >
+                <img [src]="logoUrl" alt="logo" style="max-width: 80px" />
+            </a>
+            <button
+                class="navbar-toggler lg:hidden"
+                type="button"
+                (click)="toggleClass()"
+            >
+                <span class="burger-menu">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </span>
+            </button>
+            <div class="navbar-collapse flex self-center grow basis-auto">
+                <ul class="navbar-nav self-center flex-row ml-auto lg:flex">
+                    <li
+                        class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0"
+                    >
+                        <a
+                            routerLink="/"
+                            (click)="closeMenu()"
+                            class="text-black text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li
+                        class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle"
+                        >
+                            Pages
+                        </a>
+                        <ul
+                            class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible"
+                        >
+                            <li class="py-[8px] px-20">
+                                <a
+                                    routerLink="/about"
+                                    (click)="closeMenu()"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-primary"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="py-[8px] px-20">
+                                <a
+                                    routerLink="/services"
+                                    (click)="closeMenu()"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-primary"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                >
+                                    Services
+                                </a>
+                            </li>
+                            <li class="py-[8px] px-20">
+                                <a
+                                    routerLink="/team"
+                                    (click)="closeMenu()"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-primary"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0"
+                    >
+                        <a
+                            routerLink="/pricing"
+                            (click)="closeMenu()"
+                            class="text-black text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                        >
+                            Pricing
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

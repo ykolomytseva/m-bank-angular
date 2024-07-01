@@ -1,0 +1,6 @@
+.mission-area {
+    &::before {
+        background: rgba(223, 222, 253, 255);
+        filter: blur(90px);
+    }
+}

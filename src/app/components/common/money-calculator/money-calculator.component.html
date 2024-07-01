@@ -1,0 +1,52 @@
+<div
+    class="flex justify-center items-center h-screen bg-gradient-to-br from-blue-500 to-purple-600"
+>
+    <div
+        class="bg-white lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg flex justify-center items-center"
+    >
+        <!-- Centering the image within a div -->
+        <div class="p-6">
+            <div class="mb-6 flex justify-center items-center">
+                <img
+                    src="assets/images/features/banknote.png"
+                    alt="Exchange Icon"
+                    class="w-12 h-12"
+                    style="display: block; margin: 0 auto"
+                />
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <label
+                        for="amountToSend"
+                        class="block text-gray-700 font-bold mb-2"
+                        >You send (GBP)</label
+                    >
+                    <input
+                        type="text"
+                        id="amountToSend"
+                        [value]="amountToSend"
+                        (input)="onAmountToSendChange($event)"
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+                        placeholder="Enter amount to send"
+                    />
+                </div>
+                <div>
+                    <label
+                        for="amountReceived"
+                        class="block text-gray-700 font-bold mb-2"
+                        >Recipient gets (EUR)</label
+                    >
+                    <input
+                        type="text"
+                        id="amountReceived"
+                        [value]="amountReceived"
+                        (input)="onAmountReceivedChange($event)"
+                        class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+                        placeholder="Estimated amount received"
+                        readonly
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<!-- Default Section -->
+<div
+    class="py-60 md:py-80 lg:py-100 xl:py-130 bg-gray relative z-1"
+    [ngClass]="{
+        hidden: router.url === '/index-2' || router.url === '/testimonials'
+    }"
+>
+    <div class="px-10 sm:px-0 container mx-auto">
+        <h1
+            class="text-center text-[30px] md:text-[40px] lg:text-[55px] xl:text-[67px] font-bold -tracking-[1px] md:-tracking-[1.68px] lg:-tracking-[2px] xl:-tracking-[2.68px] 2xl:mx-auto 2xl:max-w-[1445px] leading-[45px] md:leading-[62px] lg:leading-[80px] xl:leading-[86px] text-black"
+        >
+            Sending International
+            <a
+                routerLink="/services"
+                class="relative text-[30px] md:text-[40px] ml-5 mr-5 md:ml-10 md:mr-10 lg:ml-15 lg:mr-15 top-10 md:top-[13px] lg:top-10 xl:top-5 rounded-full w-[90px] h-[40px] md:w-[142px] md:h-[59px] inline-block transition-all bg-pastel-violet text-black border border-transparent hover:bg-dark-violet hover:text-white hover:border-dark-violet"
+            >
+                <i
+                    class="ri-arrow-right-up-line absolute left-0 right-0 top-1/2 -translate-y-2/4"
+                ></i>
+            </a>
+
+            Business Payments or Sending Money to Family Overseas? M-Bank
+            <img
+                src="assets/images/black-logo.png"
+                class="ml-5 mr-5 md:ml-10 md:mr-10 lg:ml-15 lg:mr-15 top-10 md:top-[13px] lg:top-10 xl:top-5 w-[90px] h-[40px] md:w-[142px] md:h-[59px] inline-block"
+                alt="card"
+            />
+            is your Fast and Simple Solution
+        </h1>
+    </div>
+</div>
